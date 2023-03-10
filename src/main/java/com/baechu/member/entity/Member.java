@@ -1,5 +1,6 @@
 package com.baechu.member.entity;
 
+import com.baechu.member.dto.SigninDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -37,4 +38,15 @@ public class Member {
 
     @Column(nullable = false)
     private String detailAddress;
+
+    public Member(SigninDto signinDto) {
+        this.email = signinDto.getEmail();
+        this.password = signinDto.getPassword();
+        this.sex = signinDto.getSex();
+        this.age = signinDto.getAge();
+        this.city = signinDto.getCity();
+        this.county = signinDto.getCounty();
+        this.district = signinDto.getDistrict();
+        this.detailAddress = signinDto.getDetailAddress();
+    }
 }
