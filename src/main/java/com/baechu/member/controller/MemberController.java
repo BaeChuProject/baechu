@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.baechu.common.dto.ResponseDto;
+import com.baechu.common.dto.BaseResponse;
 import com.baechu.member.dto.SigninDto;
 import com.baechu.member.service.MemberService;
 
@@ -26,7 +26,7 @@ public class MemberController {
 
 	@PostMapping("/signin")
 	@ResponseBody
-	public ResponseEntity<ResponseDto> signin(@RequestBody SigninDto signinDto) {
+	public ResponseEntity<BaseResponse> signin(@RequestBody SigninDto signinDto) {
 		return memberService.signin(signinDto);
 	}
 
