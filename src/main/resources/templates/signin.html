@@ -72,14 +72,10 @@
         if (checkValidation()) {
             let isMan = $('input[id=man]:checked').val();
             let isWoman = $('input[id=woman]:checked').val();
-            console.log(isWoman);
-            console.log(isMan);
             if (isMan) {
-                console.log(isMan);
                 sex = "1";
                 PostSiginin(sex);
             } else if (isWoman) {
-                console.log(isWoman);
                 sex = "0";
                 PostSiginin(sex);
             } else {
@@ -102,10 +98,14 @@
             }),
             dataType: "json",
             success: function (response) {
-                alert(response.msg);
+                console.log("success");
+                const msg = '[Success] : ' + response.msg;
+                alert(msg);
                 location.href = "/login";
-            }, error: function () {
-                alert("회원가입 실패");
+            }, error: function (responseData) {
+                const response = JSON.parse(responseData.responseText);
+                const msg = '[Error] : ' + response.msg;
+                alert(msg);
             }
         });
     }
@@ -116,10 +116,6 @@
             return false;
         }
         return true;
-    }
-
-    function selectData(value) {
-        console.log('value = ' + value);
     }
 
     $('#form').submit(function () {
