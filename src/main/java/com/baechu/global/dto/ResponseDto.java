@@ -1,4 +1,4 @@
-package com.baechu.dto;
+package com.baechu.global.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

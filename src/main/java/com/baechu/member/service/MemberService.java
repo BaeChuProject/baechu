@@ -1,6 +1,6 @@
 package com.baechu.member.service;
 
-import com.baechu.dto.ResponseDto;
+import com.baechu.global.dto.ResponseDto;
 import com.baechu.member.dto.SigninDto;
 import com.baechu.member.entity.Member;
 import com.baechu.member.repository.MemberRepository;
