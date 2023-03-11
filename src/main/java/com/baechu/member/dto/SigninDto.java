@@ -14,12 +14,4 @@ public class SigninDto {
     private Integer sex;
 
     private Integer age;
-
-    private String city;
-
-    private String county;
-
-    private String district;
-
-    private String detailAddress;
 }
